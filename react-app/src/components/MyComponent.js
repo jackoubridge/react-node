@@ -21,8 +21,8 @@ const MyComponent = (props) => {
 
     return(
         <>
-        <div className="container-fluid bg-white text-dark">
-            <p className='text-dark'>{!responseData ? "{responseData}" : responseData}</p>
+        <div className="container-fluid text-light">
+            <p>{!responseData ? "{responseData}" : responseData}</p>
         </div>
         </>
     )

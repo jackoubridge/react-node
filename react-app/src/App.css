@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.App{
+  font-family: 'Roboto Slab', serif !important;
+  min-height: 100vh !important;
+  width: 100vw !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rounded {
+  border-radius: 1rem!important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  height: 5rem !important;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-text{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.hero{
+  height: 100vh !important;
+  min-height: 100vh !important;
+  background-image: url("https://i.pinimg.com/originals/4b/f6/89/4bf68956b86298e132f5157a309a7661.jpg");
+  background-size: cover;
+  padding-bottom: 20vh !important;
+}
+
+.hero-row, .hero-col{
+  height: 100% !important;
+}
+
+.hero-left{
+  max-width: 35rem;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.9rem);
+}
+
+.tagline{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  text-wrap: balance !important;
+  font-size: 2.75rem;
+  font-weight: 800;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-right{
+  width: 100%;
+  /* background-image: url("https://i.pinimg.com/originals/4b/f6/89/4bf68956b86298e132f5157a309a7661.jpg"); */
+  background-position-x: center;
+  background-position-y: center;
+  animation: shrink 2s;
+  background-size: 270%;
+  animation-fill-mode:forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.minecraft{
+  height: 100vh !important;
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 270%;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-size: 250%;
   }
 }

@@ -1,30 +1,23 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
 import './App.css';
-import MyComponent from './components/MyComponent';
+import Hero from './components/Hero';
+import Minecraft from './components/Minecraft';
+import React, { useRef } from 'react';
 
 function App() {
 
-  // const [responseData, setResponseData] = useState(null);
+  const mcRef = useRef(null);
 
-  // const handlePostRequest = async () => {
-  //   try {
-  //     const response = await axios.post('http://localhost:8080/api', {
-  //     });
-
-  //     setResponseData(response.data.data);
-  //   } catch (error) {
-  //     console.error('Error:', error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   handlePostRequest();
-  // }, []);
+  const scrollToMC = () => {
+    if (mcRef.current) {
+      mcRef.current.scrollIntoView({ behavior: 'smooth' });
+      console.log("scrolled!");
+    }
+  };
 
   return (
     <div className="App">
-      <MyComponent/>
+      <Hero scrollToMC={scrollToMC}/>
+      <Minecraft ref={mcRef}/>
     </div>
   );
 }
