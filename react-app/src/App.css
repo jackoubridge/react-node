@@ -10,7 +10,8 @@
 
 .header{
   height: 5rem !important;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1rem);
 }
 
 .header-text{
@@ -27,6 +28,7 @@
   overflow: hidden;
   position: relative;
   background-image: url("https://i.pinimg.com/originals/4b/f6/89/4bf68956b86298e132f5157a309a7661.jpg");
+  background-position: center;
 }
 
 .hero-row, .hero-col{
@@ -62,9 +64,68 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  background-image: url("https://i.imgur.com/smNksSJ.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .mc-info{
-  background-color: rgba(0, 0, 0, 0.5);
   flex-grow: 1;
+}
+
+.cards{
+  height: 100vh;
+  min-height: 100vh;
+  background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/a7/Cobblestone_%28texture%29_JE5_BE3.png");
+}
+
+.info-card{
+  width: 20rem !important;
+  min-height: 25rem !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1rem);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img{
+  height: 60%;
+}
+
+.info-card img{
+  object-fit: cover;
+}
+
+.info-card .card-body{
+  font-weight: 500;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.body-header .date{
+  font-weight: 300;
+}
+
+.card-body .body-header{
+  min-height: 20%;
+}
+
+.card-body .body-desc{
+  height: 80%;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    justify-content: center !important;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-left: 2rem;
+  }
 }

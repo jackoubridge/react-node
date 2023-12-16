@@ -1,7 +1,8 @@
 import './App.css';
 import Hero from './components/Hero';
-import Minecraft from './components/Minecraft';
+// import Minecraft from './components/Minecraft';
 import React, { useRef } from 'react';
+import Cards from './components/Cards';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
   return (
     <div className="App">
       <Hero scrollToMC={scrollToMC}/>
-      <Minecraft ref={mcRef}/>
+      {/* <Minecraft ref={mcRef}/> */}
+      <Cards ref={mcRef}/>
     </div>
   );
 }
