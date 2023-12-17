@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const MyComponent = (props) => {
+    
     const [responseData, setResponseData] = useState(null);
 
     const handlePostRequest = async () => {

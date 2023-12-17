@@ -8,8 +8,8 @@ app.use(cors());
 
 const port = process.env.PORT || 8080;
 
-app.post('/api', (req, res) => {
-    res.send({data: 'Hello from the backend!'});
+app.post('/ip', (req, res) => {
+    res.send({data: 'mc.jiggz.net'});
 });
 
 app.listen(port, () => {

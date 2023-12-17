@@ -1,12 +1,10 @@
-import React from "react";
-
 import Header from "./Header";
 import InfoCard from "./InfoCard";
 
-const Cards = React.forwardRef((props, ref) => {
+const News = (props) => {
     return(
         <>
-        <div className="container-fluid cards p-4 m-0" ref={ref}>
+        <div className="container-fluid cards p-4 m-0">
             <Header title="Latest News"/>
             <div className="container-fluid p-0 m-0 p-0">
                 <div className="row w-100 m-0 p-0 d-flex justify-content-center">
@@ -21,6 +19,6 @@ const Cards = React.forwardRef((props, ref) => {
         </div>
         </>
     )
-});
+};
 
-export default Cards;
+export default News;
