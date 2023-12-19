@@ -8,8 +8,8 @@ app.use(cors());
 
 const port = process.env.PORT || 8080;
 
-app.post('/ip', (req, res) => {
-    res.send({data: 'mc.jiggz.net'});
+app.post('/fetchdata', (req, res) => {
+    res.send({ip: 'mc.jiggz.net', pMax: 50, pCurr: 10, status: "Offline"});
 });
 
 app.listen(port, () => {
