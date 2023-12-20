@@ -20,7 +20,7 @@ function App() {
 
   const handlePostRequest = async () => {
     try {
-        const response = await axios.post('https://jackoubridge.onrender.com/fetchdata', {
+        const response = await axios.post('https://web.jackoubridge.com/fetchdata', {
         });
 
         setResponseData(response.data);
