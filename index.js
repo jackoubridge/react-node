@@ -6,6 +6,9 @@ app.use(express.json());
 app.use(express.static('react-app/build'));
 // app.use(cors());
 
+// const url = 'https://web.jackoubridge.com'
+const url = 'localhost:8080'
+
 const port = process.env.PORT || 8080;
 const mc_ip = "mc.jackoubridge.com";
 

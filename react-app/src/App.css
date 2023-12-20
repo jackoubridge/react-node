@@ -72,6 +72,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0.05rem 0.05rem 0.5rem black;
 }
 
 .card-img{

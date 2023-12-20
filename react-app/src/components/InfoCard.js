@@ -1,7 +1,7 @@
 const InfoCard = (props) => {
     return (
         <>
-        <div className="info-card rounded border border-secondary p-0 m-3">
+        <div className="info-card rounded shadow p-0 m-3">
             <div className="card-img w-100">
                 <img className="w-100 h-100" src={props.imageLink}></img>
             </div>

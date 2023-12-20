@@ -6,7 +6,7 @@ import Minecraft from './components/Minecraft';
 import News from './components/News';
 import Gallery from './components/Gallery';
 
-function App() {
+function App( props ) {
 
   const mcRef = useRef(null);
 
@@ -20,7 +20,7 @@ function App() {
 
   const handlePostRequest = async () => {
     try {
-        const response = await axios.post('https://web.jackoubridge.com/fetchdata', {
+        const response = await axios.post('/fetchdata', {
         });
 
         setResponseData(response.data);
