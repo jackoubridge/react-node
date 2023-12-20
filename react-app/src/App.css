@@ -2,6 +2,7 @@
   font-family: 'Roboto Slab', serif !important;
   min-height: 100vh !important;
   width: 100vw !important;
+  overflow: hidden;
 }
 
 .rounded {
@@ -59,6 +60,7 @@
 }
 
 .cards{
+  min-height: 100vh;
   background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/67/Mossy_Cobblestone_%28texture%29_JE4_BE3.png");
 }
 
@@ -121,18 +123,26 @@
 }
 
 .minecraft{
+  min-height: 100vh;
   background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/62/Spruce_Planks_%28texture%29_JE4_BE2.png");
 }
 
 .mc-col{
   margin: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(0.75rem);
   min-height: 20rem;
   width: 30rem;
-  min-width: 30rem;
   max-width: 40rem;
   font-size: 1.5rem;
+}
+.myspan{
+  width: 100% !important;
+}
+
+.mc-card{
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.75rem);
+  flex-wrap: wrap;
+  padding-bottom: 5rem !important;
 }
 
 .gallery{

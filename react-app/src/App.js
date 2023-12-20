@@ -13,21 +13,20 @@ function App() {
   const scrollToMC = () => {
     if (mcRef.current) {
       mcRef.current.scrollIntoView({ behavior: 'smooth' });
-      console.log("scrolled!");
     }
   };
 
   const [responseData, setResponseData] = useState(null);
 
   const handlePostRequest = async () => {
-  try {
-      const response = await axios.post('http://localhost:8080/fetchdata', {
-      });
+    try {
+        const response = await axios.post('http://localhost:8080/fetchdata', {
+        });
 
-      setResponseData(response.data);
-  } catch (error) {
-      console.error('Error:', error);
-  }
+        setResponseData(response.data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
   }
 
   useEffect(() => {
@@ -41,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <Hero scrollToMC={scrollToMC}/>
-      <Minecraft ref={mcRef} ip={responseData.ip} online={responseData.online}/>
+      <Minecraft ref={mcRef} ip={responseData.ip} online={responseData.online} playersCurrent={responseData.pCurr}/>
       <News />
       <Gallery/>
     </div>

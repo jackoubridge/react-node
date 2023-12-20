@@ -18,7 +18,7 @@ async function fetchdata() {
 app.post('/fetchdata', (req, res) => {
     
     fetchdata().then(data => {
-        res.send({ip: mc_ip, pMax: data.players.max, pCurr: data.players.now, online: data.online});
+        res.send({ip: mc_ip, online: data.online, pCurr: data.players.now});
     });
 });
 
