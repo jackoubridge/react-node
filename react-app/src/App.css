@@ -15,7 +15,6 @@
 }
 
 .header-text{
-  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -60,14 +59,12 @@
 }
 
 .cards{
-  /* height: 100vh;
-  min-height: 100vh; */
   background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/67/Mossy_Cobblestone_%28texture%29_JE4_BE3.png");
 }
 
 .info-card{
   width: 25rem !important;
-  min-height: 30rem !important;
+  height: 30rem !important;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(1rem);
   overflow: hidden;
@@ -76,7 +73,8 @@
 }
 
 .card-img{
-  height: 60%;
+  height: 60% !important;
+  aspect-ratio: 25/18 !important;
 }
 
 .info-card img{
@@ -102,21 +100,27 @@
   font-weight: 400;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 500px) {
   .header {
     justify-content: center !important;
     padding-left: 0;
   }
+  .header-text{
+    font-size: 1.5rem;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 501px) {
   .header {
     padding-left: 2rem;
+  }
+
+  .header-text{
+    font-size: 2rem;
   }
 }
 
 .minecraft{
-  min-height: 100vh;
   background-image: url("https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/62/Spruce_Planks_%28texture%29_JE4_BE2.png");
 }
 

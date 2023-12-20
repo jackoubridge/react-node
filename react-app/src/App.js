@@ -41,9 +41,9 @@ function App() {
   return (
     <div className="App">
       <Hero scrollToMC={scrollToMC}/>
-      <Minecraft ref={mcRef} ip={responseData.ip} status={responseData.status}/>
-      {/* <News /> */}
-      {/* <Gallery/> */}
+      <Minecraft ref={mcRef} ip={responseData.ip} online={responseData.online}/>
+      <News />
+      <Gallery/>
     </div>
   );
 }

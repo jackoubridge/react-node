@@ -7,9 +7,19 @@ app.use(express.static('react-app/build'));
 app.use(cors());
 
 const port = process.env.PORT || 8080;
+const mc_ip = "mc.jackoubridge.com";
+
+async function fetchdata() {
+    const response = await fetch("https://mcapi.us/server/status?ip=" + mc_ip);
+    const data = response.json();
+    return data;
+}
 
 app.post('/fetchdata', (req, res) => {
-    res.send({ip: 'mc.jiggz.net', pMax: 50, pCurr: 10, status: "Offline"});
+    
+    fetchdata().then(data => {
+        res.send({ip: mc_ip, pMax: data.players.max, pCurr: data.players.now, online: data.online});
+    });
 });
 
 app.listen(port, () => {
