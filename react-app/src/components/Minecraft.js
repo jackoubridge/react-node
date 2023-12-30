@@ -19,7 +19,7 @@ const Minecraft = React.forwardRef((props, ref) => {
                 <Header title={!props.ip ? "{serverIp}" : props.ip} />
                 <div className="row w-100 mc-row m-0 d-flex justify-content-center text-light">
 
-                    <div className="col-6 mc-col">
+                    <div className="col-12 col-md-6 col-sm-12 h-md-100 h-sm-50 mc-col p-3">
                         <div className="mc-card rounded w-100 h-100 p-4 m-0 d-flex">
                             <div className="mc-card-info my-auto w-100">
                                 <span className="w-100 d-block text-center rounded mb-1"><b>Server Status:</b>&nbsp;<span className="p-2 rounded" style={props.online === true ? online : offline}>{props.online === true ? "Online" : "Offline"}</span></span>
@@ -28,12 +28,7 @@ const Minecraft = React.forwardRef((props, ref) => {
 
                         </div>
                     </div>
-                    <div className="col-6 m-0 p-0 ads"></div>
-
-                    {/* <div className="col-12 col-lg-5 col-md-12 mc-col d-flex">
-                    <div className="mc-card rounded w-100 h-100 p-4 m-0">
-                    </div>
-                </div> */}
+                    <div className="col-12 col-md-6 col-sm-12 m-0 p-0 h-md-100 h-sm-50 ads"></div>
 
                 </div>
             </div>

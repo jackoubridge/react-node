@@ -140,13 +140,11 @@
 }
 
 .mc-col {
-  height: 100%;
   max-width: 40rem;
   font-size: 1.5rem;
 }
 
 .ads {
-  min-height: 100%;
   border: solid thin rgba(255, 255, 255, 0.1);
 }
 
@@ -174,4 +172,17 @@
   object-fit: cover;
   width: 100%;
   height: 40rem !important;
+}
+
+@media (min-width: 768px) {
+  .h-md-100 {
+    height: 100% !important;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .h-sm-50 {
+    height: 50% !important;
+  }
 }
