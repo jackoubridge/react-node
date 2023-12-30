@@ -1,16 +1,12 @@
 const express = require('express');
-// const cors = require('cors');
 const app = express();
 
 app.use(express.json());
 app.use(express.static('react-app/build'));
-// app.use(cors());
 
-// const url = 'https://web.jackoubridge.com'
-const url = 'localhost:8080'
 
 const port = process.env.PORT || 8080;
-const mc_ip = "mc.jackoubridge.com";
+const mc_ip = "mc.jiggz.net";
 
 async function fetchdata() {
     const response = await fetch("https://mcapi.us/server/status?ip=" + mc_ip);
@@ -19,9 +15,9 @@ async function fetchdata() {
 }
 
 app.post('/fetchdata', (req, res) => {
-    
+
     fetchdata().then(data => {
-        res.send({ip: mc_ip, online: data.online, pCurr: data.players.now});
+        res.send({ ip: mc_ip, online: data.online, pCurr: data.players.now });
     });
 });
 
