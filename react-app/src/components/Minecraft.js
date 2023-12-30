@@ -24,6 +24,7 @@ const Minecraft = React.forwardRef((props, ref) => {
                             <div className="mc-card-info my-auto w-100">
                                 <span className="w-100 d-block text-center rounded mb-1"><b>Server Status:</b>&nbsp;<span className="p-2 rounded" style={props.online === true ? online : offline}>{props.online === true ? "Online" : "Offline"}</span></span>
                                 <span className="w-100 d-block text-center"><b>Current players: </b> &nbsp; {props.playersCurrent}</span>
+                                <span className="w-100 d-block text-center"><i>Version {props.version}</i></span>
                             </div>
 
                         </div>

@@ -6,7 +6,7 @@ import Minecraft from './components/Minecraft';
 import News from './components/News';
 import Gallery from './components/Gallery';
 
-function App( props ) {
+function App(props) {
 
   const mcRef = useRef(null);
 
@@ -20,29 +20,29 @@ function App( props ) {
 
   const handlePostRequest = async () => {
     try {
-        const response = await axios.post('/fetchdata', {
-        });
+      const response = await axios.post('/fetchdata', {
+      });
 
-        setResponseData(response.data);
+      setResponseData(response.data);
     } catch (error) {
-        console.error('Error:', error);
+      console.error('Error:', error);
     }
   }
 
   useEffect(() => {
-  handlePostRequest();
+    handlePostRequest();
   }, []);
 
-  if(!responseData){
+  if (!responseData) {
     return null;
   }
 
   return (
     <div className="App">
-      <Hero scrollToMC={scrollToMC}/>
-      <Minecraft ref={mcRef} ip={responseData.ip} online={responseData.online} playersCurrent={responseData.pCurr}/>
+      <Hero scrollToMC={scrollToMC} />
+      <Minecraft ref={mcRef} ip={responseData.ip} online={responseData.online} playersCurrent={responseData.pCurr} version={responseData.version} />
       <News />
-      <Gallery/>
+      <Gallery />
     </div>
   );
 }
