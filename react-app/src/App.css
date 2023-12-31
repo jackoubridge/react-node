@@ -47,7 +47,6 @@
   display: flex;
   width: 100%;
   text-wrap: balance !important;
-  font-size: 2.75rem;
   font-weight: 800;
 }
 
@@ -104,27 +103,6 @@
   font-weight: 400;
 }
 
-@media only screen and (max-width: 500px) {
-  .header {
-    justify-content: center !important;
-    padding-left: 0;
-  }
-
-  .header-text {
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (min-width: 501px) {
-  .header {
-    padding-left: 2rem;
-  }
-
-  .header-text {
-    font-size: 2rem;
-  }
-}
-
 .minecraft {
   height: 100vh;
   height: 100svh;
@@ -141,7 +119,12 @@
 
 .mc-col {
   max-width: 40rem;
-  font-size: 1.5rem;
+}
+
+.status {
+  padding: 0 !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .ads {
@@ -178,11 +161,45 @@
   .h-md-100 {
     height: 100% !important;
   }
+
+  .tagline {
+    font-size: 2.75rem;
+  }
+
+  .mc-card-info {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    padding-left: 2rem;
+  }
+
+  .header-text {
+    font-size: 2rem;
+  }
+
 }
 
 
 @media (max-width: 767px) {
   .h-sm-50 {
     height: 50% !important;
+  }
+
+  .tagline {
+    font-size: 2rem;
+  }
+
+  .mc-card-info {
+    font-size: 1rem;
+  }
+
+  .header {
+    justify-content: center !important;
+    padding-left: 0;
+  }
+
+  .header-text {
+    font-size: 1.5rem;
   }
 }

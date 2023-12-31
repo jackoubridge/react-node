@@ -3,7 +3,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 import Hero from './components/Hero';
 import Minecraft from './components/Minecraft';
-import News from './components/News';
 import Gallery from './components/Gallery';
 
 function App(props) {
@@ -41,7 +40,6 @@ function App(props) {
     <div className="App">
       <Hero scrollToMC={scrollToMC} />
       <Minecraft ref={mcRef} ip={responseData.ip} online={responseData.online} playersCurrent={responseData.pCurr} version={responseData.version} />
-      <News />
       <Gallery />
     </div>
   );
