@@ -117,10 +117,6 @@
   flex-grow: 1 !important;
 }
 
-.mc-col {
-  max-width: 40rem;
-}
-
 .status {
   padding: 0 !important;
   padding-left: 0.5rem !important;
@@ -140,6 +136,8 @@
   backdrop-filter: blur(0.75rem);
   flex-wrap: wrap;
   padding-bottom: 5rem !important;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
 }
 
 .gallery {
