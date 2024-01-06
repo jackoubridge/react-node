@@ -37,7 +37,7 @@ function App(props) {
   }
 
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <Hero scrollToMC={scrollToMC} />
       <Minecraft ref={mcRef} ip={responseData.ip} online={responseData.online} playersCurrent={responseData.pCurr} version={responseData.version} />
       <Gallery />
